@@ -36,12 +36,12 @@
 
 def print_operation_table(operation, num_column = 6, num_rows = 6):
     for i in range(1, num_column + 1):
-        print(" ", ' '.join(str(i)), end = '  ')
+        print(" ",'  '.join(str(i)), end = '  ')
     print()
-    print('-'*27)
+    print('-'*5*num_rows)
     for i in range (1, num_rows + 1):
         print(i, "|", end = '')
         for j in range(1, num_column + 1):
             print(str(operation(i,j)).rjust(4), end = '')
         print()
-print_operation_table(lambda x,y: x*y)
+print_operation_table(lambda x,y: x**y,4,4)
